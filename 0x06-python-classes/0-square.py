@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" Square module """
+"""Square module."""
 
 class Square:
-    """ Is an empty class """
+    """Is an empty class."""
     pass
