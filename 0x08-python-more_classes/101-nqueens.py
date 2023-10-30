@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""N Queens Module.
-
-Contains the N Queens problem solver.
 """
+Solves the N-queens puzzle.
+"""
+
+
 from sys import argv
 
 if __name__ == "__main__":
