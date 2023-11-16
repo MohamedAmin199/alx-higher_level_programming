@@ -1,6 +1,6 @@
 #!/bin/usr/python3
 """
-Module for Rectangle class.
+Rectangle module
 """
 from models.base import Base
 
@@ -31,6 +31,8 @@ class Rectangle(Base):
         """
         Width setter
         """
+        # added a check for when value is a bool, if the check is removed
+        # the unittest for it will fail
         if not isinstance(value, int) or isinstance(value, bool):
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -68,6 +70,8 @@ class Rectangle(Base):
         """
         x setter
         """
+        # added a check for when value is a bool, if the check is removed
+        # the unittest for it will fail
         if not isinstance(value, int) or isinstance(value, bool):
             raise TypeError("x must be an integer")
         if value < 0:
@@ -151,7 +155,8 @@ class Rectangle(Base):
                     self.x = value
                 elif key == "y":
                     self.y = value
-
+                # removed the break statement, incase if the passed args are greater
+                # than 5, and one of the attributes is at the end
 
     def to_dictionary(self):
         """
