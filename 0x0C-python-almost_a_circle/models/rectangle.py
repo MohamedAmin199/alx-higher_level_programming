@@ -56,7 +56,7 @@ class Rectangle(Base):
 
     def validate_integer(self, name, value, eq=True):
         """
-        Method for validating the value.
+        Validating the value.
         """
         if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
@@ -67,13 +67,13 @@ class Rectangle(Base):
 
     def area(self):
         """
-        Computes area of this rectangle.
+        Computes the area.
         """
         return self.width * self.height
 
     def display(self):
         """
-        Display string representation of this rectangle.
+        Display string representation.
         """
         s = '\n' * self.y + \
             (' ' * self.x + '#' * self.width + '\n') * self.height
@@ -89,7 +89,7 @@ class Rectangle(Base):
 
     def __update(self, id=None, width=None, height=None, x=None, y=None):
         """
-        Internal method that updates instance attributes via */**args.
+        Method that updates instance attributes via */**args.
         """
         if id is not None:
             self.id = id
